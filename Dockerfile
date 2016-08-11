@@ -13,7 +13,9 @@ RUN apk update \
 RUN git clone git://dev.alpinelinux.org/aports
 
 RUN mkdir -p /var/cache/distfiles /opt/packages \
-    && chmod a+w /var/cache/distfiles
+    && chmod a+w /var/cache/distfiles \
+    && chgrp abuild /var/cache/distfiles \
+    && chmod g+w /var/cache/distfiles
 
 # Configure entrypoint
 COPY /docker-entrypoint.sh /usr/local/bin/

@@ -1,0 +1,9 @@
+apk-test:
+  image: ramz/alpine-apk:3.4
+  tty: true
+  stdin_open: true
+  environment:
+    GIT_USER_FULLNAME: "Ramz"
+    GIT_USER_EMAIL: ramzthecoder@gmail.com
+  volumes:
+    - /Users/ramz.sivagurunathan/projects/sw/sideproj/docker-alpine-apk/data:/opt/packages
