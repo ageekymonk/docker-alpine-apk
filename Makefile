@@ -17,7 +17,7 @@ IMAGE_TAG := $(IMAGE_NAME):$(IMAGE_VERSION)
 .PHONY: build release print-dockerfile
 
 build: ## Build docker container and tag it
-	docker build -t $(IMAGE_TAG) .
+	docker build -t $(IMAGE_TAG) $(WORKING_DIR)
 
 # Custom Help Message with self Documenting Targets
 define USAGE_DOC

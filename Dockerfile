@@ -23,5 +23,7 @@ COPY /docker-entrypoint.d/* /usr/local/bin/docker-entrypoint.d/
 
 VOLUME ["/opt/apk-build", "/opt/packages"]
 
-# ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# CMD ["puppetserver", "foreground"]
+USER apkbuilder
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["tail", "-f"]
