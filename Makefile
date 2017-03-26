@@ -11,7 +11,7 @@ else
 endif
 
 IMAGE_NAME := ramz/alpine-apk
-IMAGE_VERSION := 3.4
+IMAGE_VERSION := latest
 IMAGE_TAG := $(IMAGE_NAME):$(IMAGE_VERSION)
 
 .PHONY: build release print-dockerfile
