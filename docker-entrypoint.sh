@@ -7,4 +7,4 @@ do
     sh $DIR/$file
 done
 
-exec "$@"
+su-exec apkbuilder "$@"
